@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Blog Posts</h1>
+        <a href="/new-post" class="btn btn-primary mb-4">Create New Post</a>
+
+        <ul class="list-unstyled">
+            <% posts.forEach(post => { %>
+                <li class="mb-4 p-3 bg-light rounded">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                    <div class="d-flex flex-column">
+                        <!-- Edit Button -->
+                        <a href="/edit-post/<%= post.id %>" class="btn btn-info mb-2">Edit</a>
+                        <!-- Delete Button -->
+                        <form action="/delete-post/<%= post.id %>" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>                                      
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

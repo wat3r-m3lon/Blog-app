@@ -1,0 +1,116 @@
+/* General Body Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Make form take full width */
+    align-items: center;
+}
+
+input[type="text"], textarea {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Full width for input fields */
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Submit Button */
+input[type="submit"], button[type="submit"] {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Back to Home Link */
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #3498db;
+    margin-top: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    input[type="submit"], button[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Optional styling for buttons */
+.btn {
+    width: 100%; /* Ensure the buttons take full width */
+}
